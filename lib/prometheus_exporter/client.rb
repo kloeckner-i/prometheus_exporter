@@ -51,7 +51,7 @@ module PrometheusExporter
     MAX_SOCKET_AGE = 25
     MAX_QUEUE_SIZE = 10_000
 
-    def initialize(host: 'localhost', port: PrometheusExporter::DEFAULT_PORT, max_queue_size: nil, thread_sleep: 0.5, json_serializer: nil, custom_labels: nil)
+    def initialize(host: PrometheusExporter::DEFAULT_HOST, port: PrometheusExporter::DEFAULT_PORT, max_queue_size: nil, thread_sleep: 0.5, json_serializer: nil, custom_labels: nil)
       @metrics = []
 
       @queue = Queue.new

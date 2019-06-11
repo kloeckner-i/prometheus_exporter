@@ -5,7 +5,9 @@ require "json"
 require "thread"
 
 module PrometheusExporter
+  DEFAULT_HOST = ENV['PROMETHEUS_EXPORTER_HOST'] || 'localhost'
   # per: https://github.com/prometheus/prometheus/wiki/Default-port-allocations
+  DEFAULT_PORT = ENV['PROMETHEUS_EXPORTER_PORT'] || 9394
   DEFAULT_PORT = 9394
   DEFAULT_PREFIX = 'ruby_'
   DEFAULT_TIMEOUT = 2
